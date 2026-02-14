@@ -1,7 +1,7 @@
 import telebot
 import os
 
-TOKEN = os.environ.get("8251517410:AAF3NWJTNKxMObs2dhWA4CEsBUfSIYgh3W0")
+TOKEN = os.environ.get("")
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -11,8 +11,9 @@ def start(message):
 
 @bot.message_handler(func=lambda message: True)
 def get_message(message):
-    admin_id = 1086459356   # آیدی عددی خودت
+    admin_id = 1086459356 
     bot.send_message(admin_id, f"پیام جدید:\n{message.text}")
     bot.reply_to(message, "✅ ارسال شد")
 
 bot.infinity_polling()
+
