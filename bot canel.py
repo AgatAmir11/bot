@@ -1,7 +1,7 @@
 import telebot
 import os
 
-TOKEN = os.environ.get("")
+TOKEN = os.environ.get("TOKEN")
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -16,4 +16,5 @@ def get_message(message):
     bot.reply_to(message, "✅ ارسال شد")
 
 bot.infinity_polling()
+
 
